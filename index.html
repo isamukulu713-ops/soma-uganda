@@ -1,1 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soma Uganda - Learn Without Limits</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      color: #172554;
+    }
+
+    header {
+      background: #172554;
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 15px #00000010;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+      border: 1px solid #ccd2e0;
+      border-radius: 9px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #response {
+      margin-top: 20px;
+      padding: 15px;
+      background: #eff6ff;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SOMA UGANDA</h1>
+    <p>Learn Without Limits</p>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <h2>Welcome, Future Achiever!</h2>
+      <p>Your personal learning journey starts here.</p>
+
+      <input
+        type="text"
+        id="question"
+        placeholder="Ask your learning question..."
+      >
+
+      <button onclick="askSoma()">Ask Soma</button>
+
+      <div id="response"></div>
+    </section>
+  </main>
+
+  <script>
+    function askSoma() {
+      const question = document.getElementById("question").value;
+      const response = document.getElementById("response");
+
+      if (question.trim() === "") {
+        response.textContent = "Please enter a question first.";
+      } else {
+        response.textContent =
+          "Thanks for asking! Soma Uganda is preparing to help you with: " + question;
+      }
+
+      response.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+
